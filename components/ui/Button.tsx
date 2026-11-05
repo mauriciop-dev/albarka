@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
+import { forwardRef, ButtonHTMLAttributes, AnchorHTMLAttributes, cloneElement, isValidElement, Children } from 'react';
 import { cn } from '@/lib/utils';
 
 interface BaseButtonProps {
@@ -35,14 +35,41 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     };
 
     const isDisabled = disabled || loading;
+    const combinedClassName = cn(baseStyles, variants[variant], sizes[size], className, isDisabled && 'pointer-events-none opacity-50');
 
     if (asChild) {
+      // Proper slot pattern: clone the immediate child and merge props
+      // This avoids nested <a> tags when children is already an <a> or <Link>
+      const childArray = Children.toArray(children);
+      const singleChild = childArray.length === 1 && isValidElement(childArray[0]) ? childArray[0] : null;
+
       const { href, ...anchorProps } = props as AnchorHTMLAttributes<HTMLAnchorElement>;
+
+      if (singleChild) {
+        // Clone the child element (e.g., <a>, <Link>) and merge our props
+        const childProps = singleChild.props as AnchorHTMLAttributes<HTMLAnchorElement>;
+        const mergedHref = href ?? childProps.href;
+        const mergedClassName = cn(combinedClassName, childProps.className);
+        
+        const mergedProps = {
+          ref,
+          href: mergedHref,
+          className: mergedClassName,
+          ariaDisabled: isDisabled ? true : undefined,
+          tabIndex: isDisabled ? -1 : undefined,
+          ...anchorProps,
+          ...childProps,
+        };
+        
+        return cloneElement(singleChild as React.ReactElement<any>, mergedProps);
+      }
+
+      // Fallback: create an <a> element if no single valid child
       return (
         <a
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(baseStyles, variants[variant], sizes[size], className, isDisabled && 'pointer-events-none opacity-50')}
+          className={combinedClassName}
           aria-disabled={isDisabled ? true : undefined}
           tabIndex={isDisabled ? -1 : undefined}
           {...anchorProps}
