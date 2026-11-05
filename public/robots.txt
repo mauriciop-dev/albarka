@@ -1,0 +1,12 @@
+# Albarka S.A.S. - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://albarka.com/sitemap.xml
+
+# Host
+Host: https://albarka.com
+
+# Crawl-delay
+Crawl-delay: 10
