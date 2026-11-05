@@ -98,7 +98,7 @@ export default function CompromisoIgualdadPage() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-body-sm font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white text-body-sm font-semibold mb-4 border border-white/30">
               <Award className="w-4 h-4" aria-hidden="true" />
               Documento Oficial - Vigente 2024-2026
             </div>
