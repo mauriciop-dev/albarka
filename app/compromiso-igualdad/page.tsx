@@ -12,6 +12,8 @@ const principles = [
     title: 'Equidad de Género',
     description: 'Garantizamos la igualdad de oportunidades, trato y condiciones entre mujeres y hombres en todos los procesos organizacionales: selección, promoción, formación, retribución y conciliación.',
     icon: Scale,
+    gradientFrom: '#00A88F',
+    gradientTo: '#00B4D8',
     commitments: [
       'Política de igualdad salarial transparente',
       'Planes de carrera sin sesgo de género',
@@ -24,6 +26,8 @@ const principles = [
     title: 'No Discriminación',
     description: 'Promovemos entornos libres de discriminación por origen étnico, edad, discapacidad, orientación sexual, identidad de género, religión, opiniones políticas o cualquier otra condición personal o social.',
     icon: Shield,
+    gradientFrom: '#0F2C59',
+    gradientTo: '#1A3D6E',
     commitments: [
       'Código de conducta cero tolerancia',
       'Canales confidenciales de denuncia',
@@ -36,6 +40,8 @@ const principles = [
     title: 'Desarrollo de Talento sin Sesgos',
     description: 'Diseñamos procesos de evaluación, desarrollo y promoción basados exclusivamente en mérito, competencias y potencial, eliminando sesgos inconscientes mediante herramientas objetivas y comités diversos.',
     icon: Users,
+    gradientFrom: '#00B4D8',
+    gradientTo: '#00A88F',
     commitments: [
       'Evaluaciones por competencias estandarizadas',
       'Comités de talento diversos e inclusivos',
@@ -48,6 +54,8 @@ const principles = [
     title: 'Conciliación Vida Laboral-Personal',
     description: 'Facilitamos la corresponsabilidad y el equilibrio entre la vida profesional y personal mediante políticas de flexibilidad, permisos extendidos y cultura de respeto al tiempo de descanso y desconexión digital.',
     icon: Heart,
+    gradientFrom: '#00A88F',
+    gradientTo: '#008772',
     commitments: [
       'Horario flexible y trabajo híbrido',
       'Permisos parentales equiparados y extendidos',
@@ -60,6 +68,8 @@ const principles = [
     title: 'Entornos de Trabajo Seguros y Empáticos',
     description: 'Fomentamos una cultura de bienestar psicológico, seguridad psicológica y liderazgo empático donde todas las personas se sienten valoradas, escuchadas y seguras para expresar su autenticidad.',
     icon: Award,
+    gradientFrom: '#1A3D6E',
+    gradientTo: '#00B4D8',
     commitments: [
       'Programa de bienestar integral',
       'Liderazgo basado en inteligencia emocional',
@@ -178,7 +188,7 @@ export default function CompromisoIgualdadPage() {
                 >
                   <Card variant="interactive" padding="lg" className="relative overflow-hidden border-border group-hover:border-secondary/50 transition-colors">
                     <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                      <div className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #00A88F 0%, #00B4D8 100%)' }}>
+                      <div className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${principle.gradientFrom}, ${principle.gradientTo})` }}>
                         <principle.icon className="w-7 h-7 text-white" aria-hidden="true" />
                       </div>
 

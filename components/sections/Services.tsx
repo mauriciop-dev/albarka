@@ -13,6 +13,8 @@ const services = [
     description: 'Implementamos y operamos Oficinas de Gestión de Proyectos (PMO) adaptadas a la madurez de tu organización, desde PMO de apoyo hasta PMO directivas estratégicas.',
     icon: Briefcase,
     color: 'primary',
+    gradientFrom: '#0F2C59',
+    gradientTo: '#1A3D6E',
     features: [
       'Diseño y puesta en marcha de PMO',
       'Gestión de portafolio de proyectos',
@@ -30,6 +32,8 @@ const services = [
     description: 'Desarrollamos capacidades de liderazgo y gestión de proyectos mediante programas experienciales, certificaciones y coaching para equipos que entregan resultados extraordinarios.',
     icon: GraduationCap,
     color: 'secondary',
+    gradientFrom: '#00A88F',
+    gradientTo: '#008772',
     features: [
       'Liderazgo de proyectos transformacional',
       'Certificaciones PMP® / CAPM® / Agile',
@@ -47,6 +51,8 @@ const services = [
     description: 'Acompañamos transformaciones complejas con metodología estructurada centrada en personas, minimizando resistencia y maximizando adopción y sostenibilidad del cambio.',
     icon: RefreshCw,
     color: 'accent',
+    gradientFrom: '#00B4D8',
+    gradientTo: '#0090AA',
     features: [
       'Estrategia y planificación del cambio',
       'Análisis de impacto y stakeholders',
@@ -64,6 +70,8 @@ const services = [
     description: 'Implementamos plataformas digitales para la gestión de portafolios, automatización de reportes, business intelligence de proyectos y ecosistemas de colaboración.',
     icon: Cpu,
     color: 'primary',
+    gradientFrom: '#0F2C59',
+    gradientTo: '#1A3D6E',
     features: [
       'Implementación PPM (MS Project, Monday, Asana, Jira)',
       'Dashboards ejecutivos y reportes automatizados',
@@ -125,7 +133,7 @@ export function Services() {
                 <div
                   className="absolute top-0 left-0 right-0 h-1"
                   style={{
-                    background: `linear-gradient(90deg, var(--color-${service.color}), var(--color-${service.color}-dark))`,
+                    background: `linear-gradient(90deg, ${service.gradientFrom}, ${service.gradientTo})`,
                   }}
                   aria-hidden="true"
                 />
@@ -136,7 +144,7 @@ export function Services() {
                   transition={{ duration: 0.3 }}
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
                   style={{
-                    background: `linear-gradient(135deg, var(--color-${service.color}), var(--color-${service.color}-dark))`,
+                    background: `linear-gradient(135deg, ${service.gradientFrom}, ${service.gradientTo})`,
                   }}
                 >
                   <service.icon className="w-6 h-6 text-white" aria-hidden="true" />

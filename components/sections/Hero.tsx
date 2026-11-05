@@ -134,7 +134,7 @@ export function Hero() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500" />
                   <div className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
-                <div className="ml-4 text-body-sm text-white/70 font-medium">PMO Dashboard - Albarka S.A.S.</div>
+                <div className="ml-4 text-body-sm text-white font-medium">PMO Dashboard - Albarka S.A.S.</div>
               </div>
 
               {/* Dashboard Content */}

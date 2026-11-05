@@ -14,7 +14,8 @@ const pillars = [
     icon: Users,
     accentIcon: HeartHandshake,
     color: 'primary',
-    gradient: 'from-primary to-primary-dark',
+    gradientFrom: '#0F2C59',
+    gradientTo: '#1A3D6E',
     features: [
       'Liderazgo Transformacional',
       'Gestión del Cambio Humana',
@@ -32,7 +33,8 @@ const pillars = [
     icon: Target,
     accentIcon: Brain,
     color: 'secondary',
-    gradient: 'from-secondary to-secondary-dark',
+    gradientFrom: '#00A88F',
+    gradientTo: '#008772',
     features: [
       'PMO as a Service',
       'Metodologías Híbridas (Agile/Waterfall)',
@@ -50,7 +52,8 @@ const pillars = [
     icon: Zap,
     accentIcon: Network,
     color: 'accent',
-    gradient: 'from-accent to-accent-dark',
+    gradientFrom: '#00B4D8',
+    gradientTo: '#0090AA',
     features: [
       'Plataformas PPM/PMO Digitales',
       'Automatización de Reportes',
@@ -112,8 +115,10 @@ export function Pillars() {
               <Card variant="interactive" padding="lg" className="h-full relative overflow-hidden">
                 {/* Accent top border */}
                 <div
-                  className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r"
-                  style={{ background: `linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-to))` }}
+                  className="absolute top-0 left-0 right-0 h-1"
+                  style={{
+                    background: `linear-gradient(90deg, ${pillar.gradientFrom}, ${pillar.gradientTo})`,
+                  }}
                   aria-hidden="true"
                 />
 
@@ -123,7 +128,7 @@ export function Pillars() {
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300"
                   style={{
-                    background: `linear-gradient(135deg, var(--tw-gradient-from), var(--tw-gradient-to))`,
+                    background: `linear-gradient(135deg, ${pillar.gradientFrom}, ${pillar.gradientTo})`,
                   }}
                 >
                   <pillar.icon className="w-7 h-7 text-white" aria-hidden="true" />
@@ -131,7 +136,7 @@ export function Pillars() {
 
                 {/* Accent Icon */}
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <pillar.accentIcon className="w-10 h-10 text-white/20" aria-hidden="true" />
+                  <pillar.accentIcon className="w-10 h-10 text-white/30" aria-hidden="true" />
                 </div>
 
                 {/* Content */}
