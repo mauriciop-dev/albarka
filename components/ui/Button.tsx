@@ -24,8 +24,8 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     const variants = {
       primary: 'bg-primary text-white hover:bg-primary-dark focus-visible:ring-primary shadow-btn-primary',
       secondary: 'bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary shadow-btn-secondary',
-      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary bg-transparent',
-      ghost: 'text-primary hover:bg-primary/10 focus-visible:ring-primary bg-transparent',
+      outline: 'border-2 border-primary text-primary-light hover:bg-primary hover:text-white focus-visible:ring-primary bg-transparent',
+      ghost: 'text-primary-light hover:bg-primary/10 focus-visible:ring-primary bg-transparent',
     };
 
     const sizes = {

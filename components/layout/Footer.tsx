@@ -146,7 +146,7 @@ export function Footer() {
             </p>
             <Link
               href="/compromiso-igualdad"
-              className="text-body-sm text-secondary hover:text-white transition-colors link-underline"
+              className="text-body-sm text-secondary-light hover:text-white transition-colors link-underline"
             >
               Declaración de Compromiso con la Igualdad, Diversidad e Inclusión
             </Link>
