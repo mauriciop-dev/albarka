@@ -51,7 +51,7 @@ export function Footer() {
             <Link href="/" aria-label="Albarka S.A.S. - Inicio">
               <Logo width={180} height={45} variant="white" />
             </Link>
-            <p className="text-body-md text-primary/70 max-w-xs leading-relaxed">
+            <p className="text-body-md text-white/70 max-w-xs leading-relaxed">
               Consultoría especializada en Dirección de Proyectos (PMO) y Transformación Organizacional.
               Articulamos Personas, Procesos y Tecnología para resultados sostenibles.
             </p>
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-body-md text-primary/70 hover:text-white transition-colors link-underline"
+                    className="text-body-md text-white/70 hover:text-white transition-colors link-underline"
                   >
                     {link.label}
                   </Link>
@@ -96,7 +96,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-body-md text-primary/70 hover:text-white transition-colors link-underline"
+                    className="text-body-md text-white/70 hover:text-white transition-colors link-underline"
                   >
                     {link.label}
                   </Link>
@@ -113,7 +113,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-body-md text-primary/70 hover:text-white transition-colors link-underline"
+                    className="text-body-md text-white/70 hover:text-white transition-colors link-underline"
                   >
                     {link.label}
                   </Link>
@@ -131,17 +131,17 @@ export function Footer() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-secondary">
                   <item.icon className="w-5 h-5" aria-hidden="true" />
                 </div>
-                <p className="text-body-md text-primary/80">{item.text}</p>
+                <p className="text-body-md text-white/80">{item.text}</p>
               </div>
             ))}
           </div>
 
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
-            <p className="text-body-sm text-primary/60 text-center md:text-left">
+            <p className="text-body-sm text-white/60 text-center md:text-left">
               © {currentYear} Albarka S.A.S. Todos los derechos reservados.
             </p>
-            <p className="text-body-sm text-primary/60 text-center md:text-left">
+            <p className="text-body-sm text-white/60 text-center md:text-left">
               Consultoría en Dirección de Proyectos y Transformación Organizacional
             </p>
             <Link

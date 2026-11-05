@@ -95,7 +95,7 @@ export default function CompromisoIgualdadPage() {
             <h1 className="text-display-sm sm:text-display-md lg:text-display-lg font-bold tracking-tight mb-4">
               Declaración de Compromiso con la Igualdad, Diversidad e Inclusión
             </h1>
-            <p className="text-body-lg text-primary/80 max-w-2xl mx-auto">
+            <p className="text-body-lg text-white/80 max-w-2xl mx-auto">
               Albarka S.A.S. — Empresa de propiedad mayoritaria femenina comprometida con la transformación organizacional desde la equidad.
             </p>
           </motion.div>
