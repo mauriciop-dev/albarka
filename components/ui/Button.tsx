@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold rounded-btn transition-all duration-300 ease-spring focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
     const variants = {
-      primary: 'bg-primary text-white hover:bg-primary-dark focus-visible:ring-primary shadow-btn-primary',
+      primary: 'bg-primary text-primary-foreground hover:bg-primary-dark focus-visible:ring-primary shadow-btn-primary',
       secondary: 'bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary shadow-btn-secondary',
       outline: 'border-2 border-primary text-primary-light hover:bg-primary hover:text-white focus-visible:ring-primary bg-transparent',
       ghost: 'text-primary-light hover:bg-primary/10 focus-visible:ring-primary bg-transparent',
