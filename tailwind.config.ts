@@ -11,7 +11,7 @@ const config: Config = {
         primary: {
           DEFAULT: '#0F2C59',
           dark: '#0A1F42',
-          light: '#1A3D6E',
+          lighter: '#1A3D6E',  // renamed from 'light' - still dark, but lighter than DEFAULT
           foreground: '#FFFFFF',
         },
         secondary: {

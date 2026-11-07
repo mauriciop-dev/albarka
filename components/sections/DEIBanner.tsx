@@ -47,7 +47,7 @@ export function DEIBanner() {
 
                 {/* Content */}
                 <div className="lg:col-span-2">
-                  <h2 id="dei-title" className="heading-section text-center lg:text-left text-primary-light">
+                  <h2 id="dei-title" className="heading-section text-center lg:text-left text-primary">
                     Compromiso con la Igualdad, Diversidad e Inclusión
                   </h2>
                   <p className="subheading-section text-center lg:text-left max-w-none mx-auto lg:mx-0">

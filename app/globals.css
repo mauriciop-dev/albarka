@@ -49,11 +49,11 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary text-primary-light hover:bg-primary hover:text-white focus-visible:ring-primary;
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary;
   }
 
   .btn-ghost {
-    @apply btn text-primary-light hover:bg-primary/10 focus-visible:ring-primary;
+    @apply btn text-primary hover:bg-primary/10 focus-visible:ring-primary;
   }
 
   .card {
