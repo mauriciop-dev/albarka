@@ -102,7 +102,7 @@ export default function CompromisoIgualdadPage() {
               <Award className="w-4 h-4" aria-hidden="true" />
               Documento Oficial - Vigente 2024-2026
             </div>
-            <h1 className="text-display-sm sm:text-display-md lg:text-display-lg font-bold tracking-tight mb-4">
+            <h1 className="text-display-sm sm:text-display-md lg:text-display-lg font-bold tracking-tight mb-4 text-white">
               Declaración de Compromiso con la Igualdad, Diversidad e Inclusión
             </h1>
             <p className="text-body-lg text-white/80 max-w-2xl mx-auto">
