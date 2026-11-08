@@ -28,6 +28,13 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       ghost: 'text-primary hover:bg-primary/10 focus-visible:ring-primary bg-transparent',
     };
 
+    const variantStyles = {
+      primary: { color: '#FFFFFF' },
+      secondary: { color: '#FFFFFF' },
+      outline: {},
+      ghost: {},
+    };
+
     const sizes = {
       sm: 'px-4 py-2 text-body-sm',
       md: 'px-6 py-3.5 text-body-md',
@@ -57,6 +64,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
           className: mergedClassName,
           ariaDisabled: isDisabled ? true : undefined,
           tabIndex: isDisabled ? -1 : undefined,
+          style: { ...childProps.style, ...variantStyles[variant] },
           ...anchorProps,
           ...childProps,
         };
@@ -72,6 +80,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
           className={combinedClassName}
           aria-disabled={isDisabled ? true : undefined}
           tabIndex={isDisabled ? -1 : undefined}
+          style={variantStyles[variant]}
           {...anchorProps}
         >
           {children}
@@ -87,6 +96,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
         type={type}
         className={cn(baseStyles, variants[variant], sizes[size], className)}
         disabled={isDisabled}
+        style={variantStyles[variant]}
         {...buttonProps}
       >
         {loading && (

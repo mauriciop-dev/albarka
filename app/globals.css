@@ -41,7 +41,14 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary text-primary-foreground hover:bg-primary-dark focus-visible:ring-primary shadow-btn-primary;
+    @apply btn bg-primary hover:bg-primary-dark focus-visible:ring-primary shadow-btn-primary;
+    color: #FFFFFF !important;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    color: #FFFFFF !important;
   }
 
   .btn-secondary {
