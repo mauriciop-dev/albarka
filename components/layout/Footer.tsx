@@ -34,9 +34,9 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { icon: MapPin, text: 'Av. Principal 123, Oficina 401, Bogotá, Colombia' },
-  { icon: Phone, text: '+57 1 234 5678' },
-  { icon: Mail, text: 'contacto@albarka.com' },
+  { icon: MapPin, text: 'Calle 99 # 10-57 ECOTEK, Bogotá D.C.' },
+  { icon: Phone, text: '+57 321 437 5043' },
+  { icon: Mail, text: 'mauriciopineda@albarka.com.co' },
 ];
 
 export function Footer() {
