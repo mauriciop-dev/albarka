@@ -2,6 +2,7 @@ import { Hero } from '@/components/sections/Hero';
 import { Pillars } from '@/components/sections/Pillars';
 import { Services } from '@/components/sections/Services';
 import { DEIBanner } from '@/components/sections/DEIBanner';
+import { DeclarationsSection } from '@/components/sections/DeclarationsSection';
 import { ContactForm } from '@/components/sections/ContactForm';
 import type { Metadata } from 'next';
 
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Pillars />
       <Services />
       <DEIBanner />
+      <DeclarationsSection />
       <ContactForm />
     </>
   );
